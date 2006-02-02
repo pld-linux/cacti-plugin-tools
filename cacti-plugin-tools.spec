@@ -19,10 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti -  
+Plugin for Cacti - Tools.
 
 %description -l pl
-Wtyczka do Cacti - 
+Wtyczka do Cacti - Tools.
 
 %prep
 %setup -q -n %{namesrc}
