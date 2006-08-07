@@ -3,13 +3,12 @@
 Summary:	Plugin for Cacti - Tools
 Summary(pl):	Wtyczka do Cacti - Tools
 Name:		cacti-plugin-tools
-Version:	0.1b
-Release:	0.1
+Version:	0.2
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-#!!!!problem with version
-Source0:	http://download.cactiusers.org/downloads/%{namesrc}.tar.gz
-# Source0-md5:	f4998bab91af5497fd35ba75b3954417
+Source0:	http://cactiusers.net/downloads/plugins/%{namesrc}-%{version}.tar.gz
+# Source0-md5:	cfd226593d826ad12dd72ed76f27332d
 URL:		http://www.cactiusers.org/
 #BuildRequires:	rpm-perlprov
 Requires:	cacti
