@@ -1,7 +1,7 @@
 %define		namesrc	tools
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Tools
-Summary(pl.UTF-8):   Wtyczka do Cacti - Tools
+Summary(pl.UTF-8):	Wtyczka do Cacti - Tools
 Name:		cacti-plugin-tools
 Version:	0.2
 Release:	1
