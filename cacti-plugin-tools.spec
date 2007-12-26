@@ -10,7 +10,7 @@ Group:		Applications/WWW
 Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
 # Source0-md5:	48057c74a25f9ee4ca6a9f49df7fdca5
 URL:		http://www.cactiusers.org/
-#BuildRequires:	rpm-perlprov
+BuildRequires:	rpm-perlprov
 Requires:	cacti
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +29,7 @@ Wtyczka do Cacti - Tools.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{webcactipluginroot}
-cp -aRf * $RPM_BUILD_ROOT%{webcactipluginroot}
+cp -a * $RPM_BUILD_ROOT%{webcactipluginroot}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
