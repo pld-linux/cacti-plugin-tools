@@ -1,18 +1,20 @@
 %define		plugin	tools
-%include	/usr/lib/rpm/macros.perl
-Summary:	Plugin for Cacti - Tools
+%define		php_min_version 5.0.0
+%include	/usr/lib/rpm/macros.php
+Summary:	Plugin for Cacti - Network Tools
 Summary(pl.UTF-8):	Wtyczka do Cacti - Tools
-Name:		cacti-plugin-tools
+Name:		cacti-plugin-%{plugin}
 Version:	0.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
-# Source0-md5:	b09190195d81852d208fb01a8a9f65c9
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.tar.gz
+# Source0-md5:	3011d05efeca1a0d3485fe6f7d328bc1
 URL:		http://www.cactiusers.org/
-BuildRequires:	rpm-perlprov
-BuildRequires:	unzip
+BuildRequires:	rpmbuild(macros) >= 1.554
 Requires:	cacti
+Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-pcre
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,18 +22,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		plugindir		%{cactidir}/plugins/%{plugin}
 
 %description
-Plugin for Cacti - Tools.
+This plugin adds Network Tools to the Utilities section of Cacti.
 
 %description -l pl.UTF-8
 Wtyczka do Cacti - Tools.
 
 %prep
-%setup -q -c
+%setup -qc
+mv %{plugin}/{LICENSE,README} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{plugindir}
-cp -a . $RPM_BUILD_ROOT%{plugindir}
+cp -a %{plugin}/* $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
