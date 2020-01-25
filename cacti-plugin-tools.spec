@@ -1,6 +1,5 @@
 %define		plugin	tools
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Plugin for Cacti - Network Tools
 Summary(pl.UTF-8):	Wtyczka do Cacti - Tools
 Name:		cacti-plugin-%{plugin}
