@@ -4,7 +4,7 @@ Summary:	Plugin for Cacti - Network Tools
 Summary(pl.UTF-8):	Wtyczka do Cacti - Tools
 Name:		cacti-plugin-%{plugin}
 Version:	0.3
-Release:	7
+Release:	8
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.tar.gz
